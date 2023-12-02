@@ -32,7 +32,9 @@ JUnit Version: 4.13.2
 
 ## Directions on how to run University Scheduler
 1: Open up the App Release APK on your Google or Android Phone.
+
 2: If there are any alerts, pay them no heed.
+
 3: If successful, you should see the main page/activity showing stats about the students current schedule.
 
 
