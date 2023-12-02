@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/img_2"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/img_2"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.UniversityScheduler"
+        tools:targetApi="33">
+
+        <receiver
+            android:name="com.example.universityscheduler.Util.AlarmsReceiver"
+            android:enabled="true"
+            android:exported="true"
+            />
+
+        <activity
+            android:name="com.example.universityscheduler.DetailTermActivity"
+            android:label="View Term"
+            android:parentActivityName="com.example.universityscheduler.TermsActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.universityscheduler.TermsActivity" />
+        </activity>
+
+        <activity
+            android:name="com.example.universityscheduler.EditTermActivity"
+            android:label="Add/Edit Term"
+            android:parentActivityName="com.example.universityscheduler.TermsActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.universityscheduler.TermsActivity" />
+        </activity>
+
+        <activity
+            android:name="com.example.universityscheduler.TermsActivity"
+            android:label="Terms List"
+            android:parentActivityName="com.example.universityscheduler.MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.universityscheduler.MainActivity" />
+        </activity>
+
+        <activity
+            android:name="com.example.universityscheduler.DetailCourseActivity"
+            android:label="View Course"
+            android:parentActivityName="com.example.universityscheduler.CoursesActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.universityscheduler.CoursesActivity" />
+        </activity>
+
+        <activity
+            android:name="com.example.universityscheduler.EditCourseActivity"
+            android:label="Add/Edit Course"
+            android:exported="true"
+            android:parentActivityName="com.example.universityscheduler.CoursesActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.universityscheduler.CoursesActivity" />
+        </activity>
+
+        <activity
+            android:name="com.example.universityscheduler.CoursesActivity"
+            android:label="Courses List"
+            android:parentActivityName="com.example.universityscheduler.MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.universityscheduler.MainActivity" />
+        </activity>
+
+        <activity
+            android:name="com.example.universityscheduler.DetailAssessmentActivity"
+            android:label="View Assessment"
+            android:parentActivityName="com.example.universityscheduler.AssessmentsActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.universityscheduler.AssessmentsActivity" />
+        </activity>
+        <activity
+            android:name="com.example.universityscheduler.EditAssessmentActivity"
+            android:label="Add/Edit Assessment"
+            android:parentActivityName="com.example.universityscheduler.AssessmentsActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.universityscheduler.AssessmentsActivity" />
+        </activity>
+
+        <activity
+            android:name="com.example.universityscheduler.AssessmentsActivity"
+            android:label="Assessments List"
+            android:parentActivityName="com.example.universityscheduler.MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.universityscheduler.MainActivity" />
+        </activity>
+
+        <activity
+            android:name="com.example.universityscheduler.NavigationActivity"
+            android:label="Scheduler Navigator"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name="com.example.universityscheduler.MainActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
